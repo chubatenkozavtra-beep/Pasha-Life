@@ -1,0 +1,21 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.pasha.life'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.pasha.life'
+        minSdk 23
+        targetSdk 35
+        versionCode 3
+        versionName '2.3'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
