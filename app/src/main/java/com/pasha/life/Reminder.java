@@ -1,4 +1,4 @@
-package com.pasha.life;
+даpackage com.pasha.life;
 
 import android.app.*;
 import android.content.*;
@@ -98,7 +98,7 @@ public class Reminder extends BroadcastReceiver {
         cal.getTimeInMillis(), pi
     );
 }
-                    );
+                    
                 }
             }
         } catch (Exception e) {
