@@ -86,9 +86,18 @@ public class Reminder extends BroadcastReceiver {
                         PendingIntent.FLAG_IMMUTABLE
                     );
 
-                    am.setAndAllowWhileIdle(
-                        AlarmManager.RTC_WAKEUP,
-                        cal.getTimeInMillis(), pi
+                   if (Build.VERSION.SDK_INT < 31 ||
+    am.canScheduleExactAlarms()) {
+    am.setExactAndAllowWhileIdle(
+        AlarmManager.RTC_WAKEUP,
+        cal.getTimeInMillis(), pi
+    );
+} else {
+    am.setAndAllowWhileIdle(
+        AlarmManager.RTC_WAKEUP,
+        cal.getTimeInMillis(), pi
+    );
+}
                     );
                 }
             }
