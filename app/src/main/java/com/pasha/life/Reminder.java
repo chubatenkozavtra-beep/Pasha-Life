@@ -1,4 +1,4 @@
-даpackage com.pasha.life;
+package com.pasha.life;
 
 import android.app.*;
 import android.content.*;
